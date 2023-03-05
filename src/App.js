@@ -2,13 +2,14 @@ import React from 'react';
 import {user} from './assets/contact'
 
 import './App.css';
-import CommentDetail from './CommentDetail';
-import ApprovalCard from './components/ApprovalCard';
+import CommentDetail from './components/App/CommentDetail';
+import ApprovalCard from './components/App/ApprovalCard';
+import AppSeason from './components/Season/AppSeason';
 
 const App = () => {
   return(
     <div className="ui conatiner comments">
-      <ApprovalCard >
+      {/* <ApprovalCard >
         <CommentDetail 
           logo={user} 
           author="Natty" 
@@ -33,7 +34,8 @@ const App = () => {
           comment='Thank you for sharing this ' 
           timeAgo="Yesterday at 02:00"
         />
-      </ApprovalCard >
+      </ApprovalCard > */}
+      <AppSeason />
 
     </div>
 
