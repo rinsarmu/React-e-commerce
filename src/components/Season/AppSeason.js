@@ -33,7 +33,7 @@ class AppSeason extends React.Component{
         return(
             <div>
                 {this.state.latitude && !this.state.errorMessage
-                ?  <p>  Location {this.state.latitude}</p>
+                ?  <SeasonDisplay lat ={this.state.latitude} />
                 : !this.state.latitude && this.state.errorMessage
                     ?   <p>  Error {this.state.errorMessage}</p>
                     :  <p>  Loading ...</p>
