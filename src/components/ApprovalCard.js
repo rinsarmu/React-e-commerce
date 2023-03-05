@@ -5,6 +5,8 @@ const ApprovalCard = (props) => {
 
     <div class="ui cards">
         <div class="card">
+        <div className='content'>{props.children}</div>
+
             <div className='content'>Are you sure?</div>
             
             <div class="extra content">
