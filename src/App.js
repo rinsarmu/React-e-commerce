@@ -3,27 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 import User from './components/App/user';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+const App = () => {
+  return(
+    <div className="ui conatiner comments">
+      <div className="comment">
+        <a href="/" className="avatar">
+          <img src={logo} alt="logo" />
+        </a>
+
+        <div className="content">
+          <a href="/" className="author">
+            Sma
+          </a>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="metadata">
+          <span className="date">Today at 06:00</span>
+        </div>
+        <div className="text">Nice blogs post</div>
 
-        <User logo ={logo} name="natty" time={new Date().getTime().toLocaleString()} comment=" awesome"/>
-
-        <User logo ={logo} name="roba" time={new Date().getTime().toLocaleString()} comment="Great Blog"/>
-
-        <User logo ={logo} name="sagni" time={new Date().getTime().toLocaleString()} comment="keep pushing "/>
-        
       </div>
-    );
-  }
+    </div>
+
+  )
+
 }
 
 export default App;
