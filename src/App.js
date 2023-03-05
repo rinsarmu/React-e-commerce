@@ -5,13 +5,18 @@ import {user} from './assets/contact'
 import CommentDetail from './components/App/CommentDetail';
 import ApprovalCard from './components/App/ApprovalCard';
 import AppSeason from './components/Season/AppSeason';
+import PicsApp from './components/Pics/PicsApp';
 
 const App = () => {
   return(
-    <AppSeason />
+
+    <PicsApp />
   )
 }
- {/*
+ {/*   <AppSeason />
+  )
+}
+ 
     // <div className="ui conatiner comments">
       <ApprovalCard >
         <CommentDetail 
