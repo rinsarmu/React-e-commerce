@@ -1,7 +1,7 @@
 import React from 'react';
 import {user} from './assets/contact'
 
-import './App.css';
+// import './App.css';
 import CommentDetail from './components/App/CommentDetail';
 import ApprovalCard from './components/App/ApprovalCard';
 import AppSeason from './components/Season/AppSeason';

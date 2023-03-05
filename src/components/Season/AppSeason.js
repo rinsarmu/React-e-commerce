@@ -1,4 +1,5 @@
 import React from 'react'
+import Loader from './Loader'
 import SeasonDisplay from './SeasonDisplay'
 
 // const AppSeason = () => {
@@ -31,13 +32,16 @@ class AppSeason extends React.Component{
       
 
         return(
-            <div>
+            <div style={{height:'100vh', width: '100%'}}>
                 {this.state.latitude && !this.state.errorMessage
                 ?  <SeasonDisplay lat ={this.state.latitude} />
                 : !this.state.latitude && this.state.errorMessage
                     ?   <p>  Error {this.state.errorMessage}</p>
-                    :  <p>  Loading ...</p>
+                    :  <Loader />
             }
+
+
+
               
             </div>
         )
