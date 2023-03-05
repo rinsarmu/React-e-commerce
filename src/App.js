@@ -1,27 +1,36 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import {user} from './assets/contact'
+
 import './App.css';
 import User from './components/App/user';
+import CommentDetail from './CommentDetail';
 
 const App = () => {
   return(
     <div className="ui conatiner comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img src={logo} alt="logo" />
-        </a>
+      <CommentDetail 
+        logo ={user} 
+        author="Natty" 
+        comment = 'Nice blogs' 
+        timeAgo = "Today at 06:00"
+      />
+      <CommentDetail 
+        logo ={user}
+        author="Natty" 
+        comment = 'Awesome blogs' 
+        timeAgo = "Today at 04:00" 
+      />
 
-        <div className="content">
-          <a href="/" className="author">
-            Sma
-          </a>
-        </div>
-        <div className="metadata">
-          <span className="date">Today at 06:00</span>
-        </div>
-        <div className="text">Nice blogs post</div>
+      <CommentDetail 
+        logo ={user}
+        author="Natty" 
+        comment = 'Thank you for sharing this ' 
+        timeAgo = "Yesterday at 02:00"
+      />
 
-      </div>
+   
+
     </div>
 
   )
