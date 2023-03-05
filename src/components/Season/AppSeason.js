@@ -12,14 +12,10 @@ import SeasonDisplay from './SeasonDisplay'
 // }
 
 class AppSeason extends React.Component{
-    constructor(){
-        super()
-
-        this.state ={
-            latitude: null,
-            errorMessage: null
-        }
-
+   
+    state ={
+        latitude: null,
+        errorMessage: null
     }
 
     //Called once in time. SO I should place all loading state for the first time here
