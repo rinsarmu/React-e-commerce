@@ -27,23 +27,31 @@ class AppSeason extends React.Component{
              err=>this.setState({errorMessage: err.message})
         )
     }
+
+    renderComponent=()=>{
+      return  <div style={{height:'100vh', width: '100%'}}>
+        {this.state.latitude && !this.state.errorMessage
+        ?  <SeasonDisplay lat ={this.state.latitude} />
+        : !this.state.latitude && this.state.errorMessage
+            ?   <p>  Error {this.state.errorMessage}</p>
+            :  <Loader message = "Please accept location" />
+    }
+
+
+
+      
+    </div>
+    }
   
     render(){
       
 
         return(
-            <div style={{height:'100vh', width: '100%'}}>
-                {this.state.latitude && !this.state.errorMessage
-                ?  <SeasonDisplay lat ={this.state.latitude} />
-                : !this.state.latitude && this.state.errorMessage
-                    ?   <p>  Error {this.state.errorMessage}</p>
-                    :  <Loader />
-            }
 
-
-
-              
-            </div>
+        <div>
+            {this.renderComponent()}
+        </div>
+        
         )
     }
 }

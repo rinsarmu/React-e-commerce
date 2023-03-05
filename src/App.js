@@ -8,8 +8,12 @@ import AppSeason from './components/Season/AppSeason';
 
 const App = () => {
   return(
-    <div className="ui conatiner comments">
-      {/* <ApprovalCard >
+    <AppSeason />
+  )
+}
+ {/*
+    // <div className="ui conatiner comments">
+      <ApprovalCard >
         <CommentDetail 
           logo={user} 
           author="Natty" 
@@ -34,13 +38,9 @@ const App = () => {
           comment='Thank you for sharing this ' 
           timeAgo="Yesterday at 02:00"
         />
-      </ApprovalCard > */}
-      <AppSeason />
+      </ApprovalCard > 
 
-    </div>
+   </div> */}
 
-  )
-
-}
 
 export default App;
