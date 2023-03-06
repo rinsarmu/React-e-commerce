@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import {selectSong} from '../actions'
+import SongDetail from './SongDetail'
 
 
 class SongList extends React.Component {
@@ -12,7 +13,7 @@ class SongList extends React.Component {
                     <div className='right floated content'>
                         <button 
                             className='ui button primary'
-                            onClick={()=>this.props.selectSong(_song.title)}
+                            onClick={()=>this.props.selectSong(_song)}
                         >
                              Select
                         </button>
@@ -30,6 +31,7 @@ class SongList extends React.Component {
         return(
             <div className='ui divided list'>
                {this.renderList()}
+               <SongDetail />
             </div>
         )
     }
