@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import {selectSong} from '../actions'
-import SongDetail from './SongDetail'
+
 
 
 class SongList extends React.Component {
@@ -31,7 +31,7 @@ class SongList extends React.Component {
         return(
             <div className='ui divided list'>
                {this.renderList()}
-               <SongDetail />
+        
             </div>
         )
     }

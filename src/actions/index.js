@@ -8,3 +8,17 @@ export const selectSong =(song)=>{
     }
 }
 
+export const increment =(x)=>{
+    return{
+        type: "INC",
+        payload:x
+    }
+}
+
+export const decrement =(x)=>{
+    return{
+        type: "DEC",
+        payload:x
+    }
+}
+

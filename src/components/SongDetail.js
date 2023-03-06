@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import Increment from './Increment'
 
 const SongDetail = ({song})=>{
     if(!song) return <div> Please select a song</div>
@@ -11,6 +12,10 @@ const SongDetail = ({song})=>{
                 <br />
                 <strong>Duration : </strong> {song.duration}
             </p>
+            <div>
+                <Increment />
+            </div>
+         
            
         </div>
     )
