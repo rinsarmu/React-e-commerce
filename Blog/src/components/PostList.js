@@ -12,7 +12,7 @@ class PostList extends Component{
         // console.log(this.props)
         const data = {...this.props.posts.splice(0,5)}
         console.log(data)
-        return this.props.posts.splice(0,5).map(post=>{
+        return this.props.posts.map(post=>{
             return (
                 <div className='item' key ={post.id}>
                     <i className='large middle aligned icon user'/>
