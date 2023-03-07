@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {fetchPosts} from '../actions'
+import UserHeader from './UserHeader'
 class PostList extends Component{
     componentDidMount(){
         this.props.fetchPosts()
@@ -8,8 +9,10 @@ class PostList extends Component{
 
     renderList=()=>{
         console.log('ddd')
-        console.log(this.props)
-        return this.props.posts.map(post=>{
+        // console.log(this.props)
+        const data = {...this.props.posts.splice(0,5)}
+        console.log(data)
+        return this.props.posts.splice(0,5).map(post=>{
             return (
                 <div className='item' key ={post.id}>
                     <i className='large middle aligned icon user'/>
@@ -17,6 +20,7 @@ class PostList extends Component{
                         <div className="description">
                             <h2>{post.title}</h2>
                             <p>{post.body}</p>
+                            <UserHeader id={post.userId}/>
                         </div>
                     </div>
                 </div>
