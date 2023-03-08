@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import GoogleAuth from '../../GoogleAuth'
 const Header = () => {
   return (
     <div className='ui secondary pointing menu'>
-        <div className="right menu">
+        <div className=" menu">
             <Link to = '/' className='item'>
                 Streamer
             </Link>
@@ -13,6 +14,7 @@ const Header = () => {
             <Link to = '/streams/new' className='item'>
                 All Streams
             </Link>
+            <GoogleAuth />
         </div>
     </div>
   )
