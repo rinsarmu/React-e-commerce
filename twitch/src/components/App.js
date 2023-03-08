@@ -1,33 +1,28 @@
 import React from 'react'
 import {  BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-
-const PageOne = () => {
-  return (
-    <div>
-      PageOne
-    </div>
-  )
-}
-
-
-
-const PageTwo = () => {
-  return (
-    <div>
-      pageTwo
-    </div>
-  )
-}
-
-
+import StreamCreate from './streams/StreamCreate'
+import StreamEdit from './streams/StreamEdit'
+import StreamDelete from './streams/StreamDelete'
+import StreamList from './streams/StreamList'
+import StreamShow from './streams/StreamShow'
+import NotMatch from './error.js/NotMatch'
+import Header from './Header/Header'
 const App = () => {
   return (
-    <div>
+    <div className='ui container'>
       <Router>
+        <Header />
+
         <Routes>
-        <Route path="/" exact  element={<PageOne />} />
-        <Route path="/h"   element={<PageTwo/>} />
+          <Route path='/' exact element ={<StreamList />}/>
+          <Route path='/streams/edit'  element ={<StreamEdit />}/>
+
+          <Route path='/streams/new'  element ={<StreamCreate />}/>
+          <Route path='/streams/delete'  element ={<StreamDelete />}/>
+          <Route path='/streams/show'  element ={<StreamShow />}/>
+          <Route path='*'  element ={<NotMatch />}/>
+
 
         </Routes>
       </Router>
